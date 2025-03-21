@@ -1,0 +1,19 @@
+{
+  "name": "playwright-ts-kayakflightsearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cucumber": "cucumber-js --config config/cucumber.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.10",
+    "ts-node": "^10.9.2"
+  }
+}
