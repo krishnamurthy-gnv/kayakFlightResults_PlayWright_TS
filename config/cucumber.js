@@ -1,16 +1,20 @@
-const {format} = require("path");
-
-module.exports={
-    default:{
-        formatOptions:{
+module.exports = {
+    default: {
+        formatOptions: {
             snippetInterface: "async-await"
         },
-        paths:["src/tests/features/"],
-        dryRun: false,
-        require:[
-            "src/tests/steps/*.ts",
-            "src/hooks/hooks.ts"
-        ], 
-        requireModule:["ts-node/register"]
+        reporter:['html:reports/cucumber-report.html', 'json:reports/cucumber-report.json', '@cucumber/pretty-formatter'],
+        format: [
+            'progress-bar',
+            'html:reports/cucumber-report.html',
+            'json:reports/cucumber-report.json',
+            '@cucumber/pretty-formatter'
+        ],
+        paths: ["src/tests/features/*.feature"],
+        require: [
+            "src/hooks/hooks.ts",
+            "src/tests/steps/*.ts"
+        ],
+        requireModule: ["ts-node/register"]
     }
 }

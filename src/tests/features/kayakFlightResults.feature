@@ -7,13 +7,13 @@ Feature: Kayak Flight Search and Results
         And User select the trip as one way
         And User selects the flight from "IAD"
         And User selects the destination to "HYD"
-        And User selects the travel date as "04-Apr-2025"
+        And User selects the travel date which is 15 days from today
         And User selects the number of adults passengers as "2"
         And User selects the Economy package
         When User clicks the search button
         Then User is navigated to the results page
 
     Scenario: User gets the list of price low to high
-        And User confirms his flight destinations
+        And User confirms his flight destination is "HYD"
         When User selects the tab "Cheapest"
         Then User gets the list of flights pricing low to high
